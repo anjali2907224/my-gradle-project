@@ -1,0 +1,108 @@
+common:
+  relaxed_https: 'true'
+  url_encoding_enabled: 'true'
+  max_timeout: '120'
+  polling_time: '5'
+
+bld_apigee:
+  host_uri: 'https://api.bld-02.ep.agw.oncp.cloud'
+  customer_context_path: '/customers/v1.0'
+  document_context_path: '/document-storage/v1.0'
+  channel_auth_call: '/v1/identityauth'
+  gcp_projectID: 'eplus-cus-bld-02-4956'
+  follow_redirects: 'false'
+  iplanetdirectorypro: 'ssoToken'
+#  this is for Zap proxy
+#  proxy: 'http://localhost:8080/'
+#  proxy: 'http://proxy-euwe2.mgmt-bld.oncp.dev:3128'
+
+bld_istio:
+  host_uri: 'https://api.ew2.bld-02.ep.gcp.oncp.cloud'
+  customer_context_path: '/customer-service/v2.0'
+  document_context_path: '/document-storage-service/v2.0'
+  istio_document_context_path: '/document-storage-service/v2.0'
+  follow_redirects: 'true'
+  gcp_projectID: 'eplus-soi-int-01-7b35'
+  iplanetdirectorypro: 'ssoToken'
+  #  this is for Zap proxy
+  proxy: 'http://localhost:8080/'
+  #  this is to run the bdd from local for istio
+#  proxy: 'http://10.84.15.145:3128'
+#  proxy: 'http://proxy-euwe2.mgmt-bld.oncp.dev:3128'
+
+bld_colleague_apigee:
+  host_uri: 'https://colleague-api.bld-02.ep.agw.oncp.cloud'
+  customer_context_path: '/customers/v2.0'
+  document_context_path: '/document-storage/v2.0'
+  istio_document_context_path: '/document-storage-service/v2.0/beta'
+  channel_auth_call: '/v1/identityauth'
+  gcp_projectID: 'eplus-cus-bld-02-4956'
+  follow_redirects: 'false'
+  iplanetdirectorypro: 'ssoToken'
+#  this is for Zap proxy
+#  proxy: 'http://localhost:8080/'
+  proxy: 'http://proxy-euwe2.mgmt-bld.oncp.dev:3128'
+
+int_apigee:
+  host_uri: 'https://colleague-api.int01.if.e.lloydsbanking.com'
+  customer_context_path: '/customers/v2.0'
+  channel_auth_call: '/v1/identityauth'
+  document_context_path: '/document-storage/v2.0'
+  istio_document_context_path: '/document-storage-service/v2.0'
+  gcp_projectID: 'eplus-soi-int-01-7b35'
+  soi_gcp_projectID: 'eplus-soi-int-01-7b35'
+  follow_redirects: 'false'
+  proxy: 'http://eplus-int-proxy-euwe2.mgmt-prd.oncp.io:3128'
+  iplanetdirectorypro: 'ssoToken'
+  auth_enabled: 'false'
+
+int02_apigee:
+  host_uri: 'https://colleague-api.int02.if.e.lloydsbanking.com'
+  customer_context_path: '/customers/v1.0'
+  channel_auth_call: '/v1/identityauth'
+  document_context_path: '/document-storage/v1.0'
+  istio_document_context_path: '/document-storage-service/v2.0'
+  iplanetdirectorypro: 'ssoToken'
+  gcp_projectID: 'eplus-soi-int-02-dc34'
+  follow_redirects: 'false'
+  proxy: 'http://eplus-int-proxy-euwe2.mgmt-prd.oncp.io:3128'
+
+int_istio:
+  host_uri: 'https://api.ew2.int-01.ep.gcp.oncp.cloud'
+  customer_context_path: '/customer-service/v1.0'
+  document_context_path: '/document-storage-service/v1.0'
+  iplanetdirectorypro: 'ssoToken'
+  gcp_projectID: 'eplus-cus-bld-02-4956'
+  follow_redirects: 'false'
+  proxy: 'http://eplus-int-proxy-euwe2.mgmt-prd.oncp.io:3128'
+
+local:
+  host_uri: 'http://localhost:9080'
+  customer_context_path: '/customer-service/v1.0'
+  channel_auth_call: '/v1/identityauth'
+  document_context_path: '/document-storage-service/v1.0'
+  iplanetdirectorypro: 'ssoToken'
+  elastic_search_context_path: '/eck-elasticsearch'
+  gcp_projectID: 'eplus-cus-bld-02-4956'
+
+pre-01_apigee:
+  host_uri: 'https://api.pre01.if.e.lloydsbanking.com'
+  customer_context_path: '/customers/v1.0'
+  channel_auth_call: '/v1/identityauth'
+  document_context_path: '/document-storage/v1.0'
+  istio_document_context_path: '/document-storage-service/v2.0'
+  gcp_projectID: 'eplus-soi-pre-01-859a'
+  iplanetdirectorypro: 'ssoToken'
+  follow_redirects: 'false'
+  proxy: 'http://eplus-pre-proxy-euwe2.mgmt-prd.oncp.io:3128'
+
+pre-01_colleague_apigee:
+  host_uri: 'https://colleague-api.pre01.if.e.lloydsbanking.com'
+  customer_context_path: '/customers/v1.0'
+  channel_auth_call: '/v1/identityauth'
+  document_context_path: '/document-storage/v1.0'
+  istio_document_context_path: '/document-storage-service/v2.0'
+  gcp_projectID: 'eplus-soi-pre-01-859a'
+  iplanetdirectorypro: 'ssoToken'
+  follow_redirects: 'false'
+  proxy: 'http://eplus-pre-proxy-euwe2.mgmt-prd.oncp.io:3128'

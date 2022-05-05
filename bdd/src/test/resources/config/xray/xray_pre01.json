@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "project": {
+            "key": "CUS"
+        },
+        "summary": "Customer BDD Jenkins Execution | PRE01",
+        "issuetype": {
+            "id": "10162"
+        },
+        "fixVersions": [
+            {
+                "name": "CAP_WrapUp"
+            }
+        ]
+    },
+    "xrayFields": {
+        "environments": ["PRE01"]
+    }
+}
